@@ -63,7 +63,7 @@ header p { color: var(--text-sec); margin: 0 0 20px 0; }
     border-radius: 8px;
     font-size: 1rem;
     margin-bottom: 15px;
-    box-sizing: border-box; /* Fix padding issue */
+    box-sizing: border-box;
 }
 
 .filters {
