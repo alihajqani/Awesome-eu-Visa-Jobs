@@ -1,0 +1,22 @@
+name: Validate PR Data
+
+on:
+  pull_request:
+    paths:
+      - 'data/companies.json'
+
+jobs:
+  check-duplicates:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Run Validation Script
+      run: python scripts/validate_json.py
