@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Europe Tech Jobs 🇪🇺</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🇪🇺 Europe Tech Visa Jobs</h1>
+            <p>Curated list of tech companies offering Visa Sponsorship & Remote Work.</p>
+            <div class="actions">
+                <a href="https://github.com/alihajqani/Awesome-eu-Visa-Jobs" target="_blank" class="github-btn">
+                    View on GitHub ★
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container search-section">
+        <input type="text" id="searchInput" placeholder="🔍 Search by Company, Tech Stack, or City...">
+        
+        <div class="filters">
+            <select id="visaFilter">
+                <option value="all">Visa: Any</option>
+                <option value="YES">✅ Sponsorship Available</option>
+                <option value="SENIOR_ONLY">⚠️ Senior Only</option>
+                <option value="NO">❌ No Sponsorship</option>
+            </select>
+
+            <select id="remoteFilter">
+                <option value="all">Remote: Any</option>
+                <option value="GLOBAL">🌎 Global Remote</option>
+                <option value="EU_ONLY">🇪🇺 EU Remote Only</option>
+                <option value="HYBRID">🏢 Hybrid</option>
+                <option value="ON_SITE">📍 On-Site</option>
+            </select>
+        </div>
+        <p id="count-label" class="count-label">Loading companies...</p>
+    </div>
+
+    <main class="container">
+        <div id="company-grid" class="grid">
+            <!-- Cards will be injected here by JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Open Source Project. Maintained by Community.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
