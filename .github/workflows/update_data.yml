@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'data/companies.json'
-  workflow_dispatch:
+
 
 jobs:
   build:

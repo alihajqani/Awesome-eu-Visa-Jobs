@@ -1,6 +1,9 @@
 name: Validate PR Data
 
 on:
+  push:
+    paths:
+      - 'data/companies.json'
   pull_request:
     paths:
       - 'data/companies.json'
