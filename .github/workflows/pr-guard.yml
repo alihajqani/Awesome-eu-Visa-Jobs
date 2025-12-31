@@ -20,10 +20,23 @@ jobs:
           echo "Changed files:"
           echo "$files"
 
+          allowed_files=(
+            "data/companies.json"
+            ".github/workflows/pr-guard.yml"
+          )
+
           for file in $files; do
-            if [[ "$file" != "data/companies.json" ]]; then
+            allowed=false
+            for allowed_file in "${allowed_files[@]}"; do
+              if [[ "$file" == "$allowed_file" ]]; then
+                allowed=true
+                break
+              fi
+            done
+
+            if [[ "$allowed" == false ]]; then
               echo "❌ Invalid file modified: $file"
-              echo "Only 'data/companies.json' is allowed to be changed in PRs."
+              echo "Only 'data/companies.json' is allowed in regular PRs."
               exit 1
             fi
           done
