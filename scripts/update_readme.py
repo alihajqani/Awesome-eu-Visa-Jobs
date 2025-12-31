@@ -1,5 +1,6 @@
 import json
 import os
+from validate_json import validate_all
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_PATH = os.path.join(BASE_DIR, 'data', 'companies.json')
@@ -50,6 +51,10 @@ A curated list of European tech companies offering **Visa Sponsorship** and **Re
     return md_content
 
 def update_readme():
+    if not validate_all():
+        print("❌ Invalid data detected. README update aborted.")
+        return
+
     try:
         companies = load_data()
         companies.sort(key=lambda x: x['name'])
