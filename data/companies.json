@@ -103,5 +103,45 @@
     "relocation_package": true,
     "language": "English"
   }
+},
+{
+  "name": "Entrix",
+  "careers_url": "https://www.entrixenergy.com/en/jobs",
+  "locations": [
+    {
+      "country": "Germany",
+      "city": "Munich",
+      "is_hq": true
+    },
+    {
+      "country": "Poland",
+      "city": "Warsaw",
+      "is_hq": false
+    },
+    {
+      "country": "Italy",
+      "city": "Milan",
+      "is_hq": false
+    },
+    {
+      "country": "Spain",
+      "city": "Madrid",
+      "is_hq": false
+    }
+  ],
+  "visa_sponsorship": "YES",
+  "remote_policy": "HYBRID",
+  "tech_stack": [
+    "AI",
+    "PostgreSQL",
+    "Kubernetes",
+    "SCADA"
+  ],
+  "hiring_status": "ACTIVE",
+  "last_updated": "2025-12-30",
+  "meta_data": {
+    "relocation_package": true,
+    "language": "English"
+  }
 }
 ]
