@@ -2,74 +2,17 @@
 
 A curated list of European tech companies offering **Visa Sponsorship** and **Remote Work**.
 
-**[🌐 Visit the Website (Search & Filter)](https://alihajqani.github.io/Awesome-eu-Visa-Jobs)**
+**[🌐 Visit the Website (Search & Filter)](https://alihajqani.github.io/Awesome-eu-Visa-Jobs/)**
 
 ## 🚀 Company List
 | Company | Locations | Visa Sponsorship | Remote Policy | Tech Stack | Last Check |
 |:---|:---|:---:|:---:|:---|:---:|
+| [Entrix](https://www.entrixenergy.com/en/jobs) | Munich, Germany<br>Warsaw, Poland<br>Milan, Italy<br>Madrid, Spain | ✅ | 🏢 Hybrid | AI, PostgreSQL, Kubernetes | 2025-12-30 |
 | [Spotify](https://www.lifeatspotify.com/jobs) | Stockholm, Sweden<br>Berlin, Germany<br>London, UK | ✅ | 🏢 Hybrid | Java, Python, React | 2025-12-29 |
 | [Zalando](https://jobs.zalando.com/en/) | Berlin, Germany<br>Dublin, Ireland | ✅ | 🇪🇺 EU Only | Scala, Kotlin, AWS | 2025-12-29 |
 
-# 🤝 How to Contribute
-
-First off, thanks for taking the time to contribute! This project relies on community support to keep the list of visa-sponsoring companies up to date.
-
-## 🚀 How to Add a New Company
-
-You don't need to be a developer to contribute. Just follow these steps:
-
-1.  **Fork** this repository to your own GitHub account.
-2.  Open the file `data/companies.json`.
-3.  Add a new entry inside the main list `[ ... ]`.
-4.  Use the **template** below to ensure the format is correct.
-5.  **Commit** your changes and submit a **Pull Request**.
-
-> ⚠️ **IMPORTANT:** Do NOT edit `README.md` manually. The system updates it automatically.
-
----
-
-## 📋 JSON Data Template
-
-Please copy this object and fill in the details. **Remove the comments** before saving.
-
-```json
-{
-  "name": "Company Name",
-  "careers_url": "https://company.com/careers",
-  "locations": [
-    {
-      "country": "Germany",
-      "city": "Berlin",
-      "is_hq": true
-    }
-  ],
-  "visa_sponsorship": "YES",
-  "remote_policy": "HYBRID",
-  "tech_stack": [
-    "TypeScript",
-    "React"
-  ],
-  "hiring_status": "ACTIVE",
-  "last_updated": "2025-01-01", 
-  "meta_data": {
-    "relocation_package": true,
-    "language": "English"
-  }
-}
-```
-
-## 📝 Field Guidelines
-
-| Field | Type | Accepted Values / Notes |
-| :--- | :--- | :--- |
-| `name` | String | The official name of the company. |
-| `careers_url` | String | Direct link to the jobs/careers page. |
-| `locations` | Array | List of office locations. Set `"is_hq": true` for the headquarters. |
-| `visa_sponsorship` | String | `YES`, `NO`, `SENIOR_ONLY` |
-| `remote_policy` | String | `GLOBAL`, `EU_ONLY`, `HYBRID`, `ON_SITE` |
-| `tech_stack` | Array | Main technologies used. |
-| `last_updated` | String | Format: `YYYY-MM-DD` (Example: "2025-12-29") |
-| `hiring_status` | String | `ACTIVE`, `FREEZE` |
-| `meta_data` | Object | `relocation_package`: true/false <br> `language`: Main working language. |
-
-Thank you for helping job seekers! 🇪🇺💙
+## 🤝 How to Contribute
+1. Fork this repository.
+2. Edit `data/companies.json`.
+3. Add your company details (Make sure to update `last_updated`).
+4. Submit a Pull Request!
