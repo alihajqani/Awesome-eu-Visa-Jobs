@@ -1,0 +1,44 @@
+name: PR Guard - Allowed Files Only
+
+on:
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get changed files from GitHub API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          files=$(gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files --jq '.[].filename')
+
+          echo "Changed files:"
+          echo "$files"
+
+          allowed_files=(
+            "data/companies.json"
+            ".github/workflows/pr-guard.yml"
+          )
+
+          for file in $files; do
+            allowed=false
+            for allowed_file in "${allowed_files[@]}"; do
+              if [[ "$file" == "$allowed_file" ]]; then
+                allowed=true
+                break
+              fi
+            done
+
+            if [[ "$allowed" == false ]]; then
+              echo "❌ Invalid file modified: $file"
+              echo "Only 'data/companies.json' is allowed in regular PRs."
+              exit 1
+            fi
+          done
+
+          echo "✅ PR modifies only allowed files."
